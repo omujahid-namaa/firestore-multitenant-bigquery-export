@@ -23,6 +23,7 @@ import { mockConsoleLog } from "./__mocks__/console";
 
 // Mock Firestore BigQuery Tracker
 jest.mock("@firebaseextensions/firestore-bigquery-change-tracker", () => ({
+  RawChangelogViewSchema: { fields: [] },
   FirestoreBigQueryEventHistoryTracker: jest.fn(() => ({
     initialize: jest.fn(async () => {}),
     record: jest.fn(() => {}),
